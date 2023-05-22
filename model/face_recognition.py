@@ -2,7 +2,7 @@ import cv2
 import threading
 from deepface import DeepFace
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
@@ -60,10 +60,12 @@ def display_frame():
 
 
 # Load resident face images
-resident_faces.append(cv2.imread("reference1.jpg"))
 resident_faces.append(cv2.imread("reference2.jpg"))
 resident_faces.append(cv2.imread("reference3.jpg"))
-resident_faces.append(cv2.imread("reference4.jpg"))
+# resident_faces.append(cv2.imread("reference4.jpg"))
+resident_faces.append(cv2.imread("friends1.jpg"))
+# resident_faces.append(cv2.imread("friends2.jpg"))
+# resident_faces.append(cv2.imread("friends3.jpg"))
 
 
 # Create a new thread to display the frame
